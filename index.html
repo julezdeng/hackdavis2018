@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            EmergenSpeed
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.min.js"></script>
+        <script src="https://media.twiliocdn.com/sdk/js/chat/v2.0/twilio-chat.min.js"></script>
+        <script src="js/js.cookie.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body onload="pullthisshiz()">
+        <div id="wrapper">
+            <p id="title">
+                Emergency Contacts   
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="space">
+                    <div class="col-12">
+                        <p class="label">
+                            Name:
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <input id="name" type="text" class="textForm">
+                    </div>
+                    <div class="col-12">
+                        <p class="label">
+                            Phone Number: 
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <input id="phoneNumber" type="text" class="textForm">
+                    </div>
+                    <div class="col-12">
+                        <p class="label">
+                            Address: 
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <input id="address" type="text" class="textForm">
+                    </div>
+                    <div class="col-12">
+                        <p class="label">
+                            Relation: 
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <input id="relation" type="text" class="textForm">
+                    </div>
+                    <div class="col-12">
+                        <div class="pressadabutton">
+                            <button id="submit" onclick="submitForms()" class="btnSubmit">
+                                + Add Contact
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="homeWrapper">
+                <div id="btnSubmit" class="helpButton" onclick="callForHelp()">
+                    Notify
+                </div>
+                <div id="backToHome" onclick="addInformation()">
+                    Change Contact Information
+                </div>   
+            </div>
+        </div>
+    </body>
+</html>
